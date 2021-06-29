@@ -1,0 +1,45 @@
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col-md-8 col-10 col-md-offset-2">
+            <div class="table-responsive">
+                <table class="table table-primary table-collapse table-striped" *ngIf="this.productService.getTotalPrice()">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of this.productService.cartProducts">
+                            <td>
+                                {{item.name}}
+                            </td>
+                            <td>
+                                <img src="{{item.image}}" style="height:80px;width:80px;" alt="">
+                            </td>
+                            <td>
+                                {{item.cart}}
+                            </td>
+                            <td>
+                                {{item.price * item.cart}}
+                            </td>
+                            <td>
+                                <button mat-raised-button color="warn" (click)="this.productService.removeItem(item.id)">Remove</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Total</td>
+                            <td>{{this.productService.getTotalPrice()}}</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

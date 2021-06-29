@@ -1,0 +1,37 @@
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#myPage"><img src="assets/img/images.png" style="height: 24px; width: 24px" id="icon" alt="User Icon" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="">Welcome {{ userDetails.fullName }}</a>
+                    </li>
+                    <li><a routerLink="/userprofile">HOME</a></li>
+                    <li><a routerLink="/contact">CONTACT</a></li>
+                    <li><a routerLink="/about">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORIES <span class="caret"></span
+          ></a>
+                        <ul class="dropdown-menu">
+                            <li><a routerLink="/product">Dresses</a></li>
+                            <li><a>Makeup</a></li>
+                            <li><a>Bags</a></li>
+                            <li><a>Watch</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-search"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
