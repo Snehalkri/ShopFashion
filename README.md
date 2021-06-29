@@ -11,6 +11,6 @@ Content :
 ## Get the Code
 
 ```
-$ git clone 
+$ git clone https://github.com/Snehalkri/ShopFashion
 $ npm install
 ```
